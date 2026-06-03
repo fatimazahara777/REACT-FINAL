@@ -1,6 +1,9 @@
+import { Link } from "react-router-dom";
+
 export default function Home() {
- return (
- <main className="min-h-[calc(100vh-140px)] bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 flex flex-col items-center justify-center text-center px-6">
+  return (
+    <main className="min-h-[calc(100vh-140px)] bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 flex flex-col items-center justify-center text-center px-6">
+      
       <h1 className="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
         Welcome to AI Dev Community
       </h1>
@@ -10,10 +13,13 @@ export default function Home() {
       </p>
 
       <div className="mt-16">
-        <button className="bg-cyan-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-cyan-600 transition">
-          Rejoindre le Club
-        </button>
+        <Link to="/join">
+          <button className="bg-cyan-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-cyan-600 transition">
+            Rejoindre le Club
+          </button>
+        </Link>
       </div>
+
     </main>
   );
 }
