@@ -11,7 +11,7 @@ export default function Home() {
       <p className="mt-6 text-xl text-slate-300 max-w-3xl">
         Join us in exploring the future of artificial intelligence and machine learning
       </p>
-
+<p>TEST GIT UPDATE</p>git add .
       <div className="mt-16">
         <Link to="/join">
           <button className="bg-cyan-500 text-white px-8 py-3 rounded-xl font-semibold hover:bg-cyan-600 transition">
