@@ -10,11 +10,11 @@ export default function Home() {
 
       <div className="relative z-10">
         <h1 className="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent">
-          Welcome to AI Dev Community
+          AI Dev Community
         </h1>
 
         <p className="mt-6 text-xl text-slate-300 max-w-3xl mx-auto text-center">
-          Join us in exploring the future of artificial intelligence and machine learning
+          Rejoignez-nous pour explorer l’avenir de l’intelligence artificielle et du machine learning
         </p>
 
         <div className="mt-16">
