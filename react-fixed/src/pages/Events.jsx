@@ -1,68 +1,74 @@
+import React from "react";
+
 const events = [
   {
-    title: "AI Workshop",
+    title: "Formation Python 2024",
     color: "text-cyan-300",
-    desc: "Practical coding sessions with real-world AI projects",
+    image: "/image-event/event1.jpeg",
+    desc: "Dans le cadre de ses activités de formation, le Club AI & Dev Community a eu le plaisir d’accueillir M. Taoufik Amzil pour animer une session dédiée à l’initiation au langage Python.",
   },
   {
-    title: "Hackathon",
+    title: "Atelier : Poster scientifique",
     color: "text-pink-300",
-    desc: "Build innovative solutions in a competitive environment",
+    image: "/image-event/event2.png",
+    desc: "Le Club AI & Dev Community et le Club Soft Skills ont organisé le PFA Day autour du thème Révolutions par l’IA.",
   },
   {
-    title: "Deep Learning Conference",
+    title: "Conference : AI & Ses domaines d’application",
     color: "text-purple-300",
-    desc: "Learn advanced AI and neural networks concepts",
+    image: "/image-event/event3.jpeg",
+    desc: "Le Club AI & Dev Community a tenu une conférence sur les applications concrètes de l’IA dans différents domaines.",
   },
   {
-    title: "Python Training",
+    title: "Atelier: Machine Learning",
     color: "text-emerald-300",
-    desc: "Master Python from basics to advanced level",
+    image: "/image-event/event4.png",
+    desc: "Nous avons organisé des séances interactives de Machine Learning axées sur la découverte des concepts de base.",
   },
-
-  // ➕ NEW EVENTS
   {
-    title: "AI Learning Path",
+    title: "Formation langue chinoise",
     color: "text-indigo-300",
-    desc: "Structured curriculum from basics to advanced machine learning concepts",
+    image: "/image-event/event5.jpeg",
+    desc: "Une formation destinée à découvrir les bases de la langue chinoise et encourager l’ouverture culturelle.",
   },
   {
-    title: "Cutting-edge Tech",
+    title: "Data Analysis Training",
     color: "text-yellow-300",
-    desc: "Stay updated with the latest in AI and technology",
+    image: "/image-event/event6.jpeg",
+    desc: "Une session pratique pour apprendre le nettoyage des données, la visualisation et les bases de l’analyse statistique avec Python et Excel.",
   },
 ];
 
 export default function Events() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 p-10">
-      <div className="container mx-auto">
+    <div id ="events"className="min-h-screen bg-gradient-to-br from-slate-900 via-indigo-950 to-slate-900 p-10">
+      <h1 className="text-5xl md:text-7xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent mb-10 text-center">
+        Événements
+      </h1>
 
-        <h1 className="text-4xl font-bold mb-10 text-white text-center">
-          Événements
-        </h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {events.map((event, index) => (
+          <div
+            key={index}
+            className="bg-slate-800 rounded-2xl shadow-lg overflow-hidden hover:scale-105 transition"
+          >
+            <img
+              src={event.image}
+              alt={event.title}
+              className="w-full h-52 object-cover"
+            />
 
-        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {events.map((event, index) => (
-            <div
-              key={index}
-              className="group bg-white/5 border border-white/10 backdrop-blur-xl p-6 rounded-2xl shadow-lg hover:bg-white/10 transition duration-300"
-            >
-              <h2 className={`text-2xl font-bold ${event.color}`}>
+            <div className="p-6">
+              <h2 className={`text-xl font-bold ${event.color}`}>
                 {event.title}
               </h2>
 
-              <p className="text-gray-300 mt-3">
+              <p className="text-slate-300 mt-3">
                 {event.desc}
               </p>
-
-              <button className="mt-5 px-4 py-2 bg-white/10 text-white rounded-lg hover:bg-white/20 transition">
-                Join Event
-              </button>
             </div>
-          ))}
-        </div>
-
+          </div>
+        ))}
       </div>
     </div>
   );
